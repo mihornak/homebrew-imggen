@@ -9,16 +9,6 @@ class Imggen < Formula
 
   def install
     bin.install "imggen"
-    (share/"imggen").install "skill/SKILL.md"
-  end
-
-  def post_install
-    claude_dir = Pathname.new(Dir.home)/".claude"
-    if claude_dir.directory?
-      skill_dir = claude_dir/"skills/generate-image"
-      skill_dir.mkpath
-      cp share/"imggen/SKILL.md", skill_dir/"SKILL.md"
-    end
   end
 
   def caveats
@@ -26,7 +16,8 @@ class Imggen < Formula
       To configure API keys, run:
         imggen auth
 
-      Claude Code skill was #{(Pathname.new(Dir.home)/".claude").directory? ? "installed" : "skipped (install Claude Code first, then run: brew postinstall imggen)"}.
+      To install the Claude Code skill (/generate-image), run:
+        imggen setup-skill
     EOS
   end
 
