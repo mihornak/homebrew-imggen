@@ -1,8 +1,8 @@
 class Imggen < Formula
   desc "Generate images using AI providers (Gemini, Freepik)"
   homepage "https://github.com/mihornak/imggen"
-  url "https://github.com/mihornak/imggen/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "3405730dd24d4f5c850366a3dea338f1b7b97191d571a721f6286309c11a0819"
+  url "https://github.com/mihornak/imggen/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "19f7b7e87a70df0acd653a67cd150a349fea477866da00f0617e7251251c5d69"
   license "MIT"
 
   depends_on "python@3"
